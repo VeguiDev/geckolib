@@ -201,8 +201,8 @@ publishing {
 	      credentials {
                 def envUsername = System.getenv("cloudUsername")
                 def envPassword = System.getenv("cloudPassword")
-                username = envUsername == null ? findProperty("cloudUsername") : envUsername
-                password = envPassword == null ? findProperty("cloudPassword") : envPassword
+                username = envUsername
+                password = envPassword
 	      }
 	    }
         publications {
