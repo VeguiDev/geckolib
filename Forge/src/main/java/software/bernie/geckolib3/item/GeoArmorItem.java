@@ -28,7 +28,7 @@ public abstract class GeoArmorItem extends ArmorItem {
 
 	@Nullable
 	@Override
-	public final String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
+	public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 		Class<? extends ArmorItem> clazz = this.getClass();
 		GeoArmorRenderer renderer = GeoArmorRenderer.getRenderer(clazz, entity);
 		return renderer.getTextureLocation((ArmorItem) stack.getItem()).toString();
