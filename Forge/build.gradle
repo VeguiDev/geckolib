@@ -196,11 +196,8 @@ publishing {
 publishing {
     repositories {
         maven {
-	      name = "cloudsmith"
-	      url = "https://maven.cloudsmith.io/geckolib3/geckolib/"
-	      def releasesRepoUrl = "https://maven.cloudsmith.io/geckolib3/geckolib/"
-	      def snapshotsRepoUrl = "https://maven.cloudsmith.io/geckolib3/geckolib/"
-	      url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+	      name = "GitHubPackages"
+	      url = uri("https://maven.pkg.github.com/VeguiDev/geckolib")
 	      credentials {
                 def envUsername = System.getenv("cloudUsername")
                 def envPassword = System.getenv("cloudPassword")
