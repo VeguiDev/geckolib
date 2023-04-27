@@ -184,15 +184,15 @@ afterEvaluate {
 shadowJar.finalizedBy(reobfShadowJar)
 jar.finalizedBy(packageSources)
 
-// publishing {
-//     publications {
-//         mavenJava(MavenPublication) {
-//             artifact shadowJar
-//             artifact packageSources
-//             artifactId = project.archives_base_name
-//         }
-//     }
-// }
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact shadowJar
+            artifact packageSources
+            artifactId = project.archives_base_name
+        }
+    }
+}
 publishing {
     repositories {
         maven {

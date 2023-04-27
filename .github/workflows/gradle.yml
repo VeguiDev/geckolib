@@ -2,6 +2,8 @@ name: Build Gradle project
 
 on:
   push:
+    tags:
+      - "*"
 
 env:
   cloudUsername: "VeguiDev"
