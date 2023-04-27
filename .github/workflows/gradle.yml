@@ -5,7 +5,7 @@ on:
 
 env:
   cloudUsername: "VeguiDev"
-  cloudPassword: GITHUB_TOKEN
+  cloudPassword: ${{GITHUB_TOKEN}}
 
 jobs:
   build-gradle-project:
@@ -16,4 +16,4 @@ jobs:
     - name: Setup Gradle
       uses: gradle/gradle-build-action@v2
     - name: Run build with Gradle Wrapper
-      run: ./gradlew build
+      run: ./Forge/gradlew build
