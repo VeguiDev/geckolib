@@ -5,7 +5,7 @@ on:
 
 env:
   cloudUsername: "VeguiDev"
-  cloudPassword: "${{GITHUB_TOKEN}}"
+  cloudPassword: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build-gradle-project:
