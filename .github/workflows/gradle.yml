@@ -19,3 +19,5 @@ jobs:
       uses: gradle/gradle-build-action@v2
     - name: Run build with Gradle Wrapper
       run: cd Forge && chmod +x ./gradlew && ./gradlew build
+    - name: Publish with Gradle Wrapper
+      run: cd Forge && ./gradlew publish
